@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ramiro Croce</title>
+        <meta name="description" content="Maquetador y diseñador web argentino.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="css/normalize.css"> 
+        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="owl-carousel/owl.carousel.js"></script>
+        <!--[if IE]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        <header>
+            <div class="orange-light">
+                <div id="logo">
+                    <i class="animated fadeInDown"></i>
+                </div>
+            </div>
+            <div class="orange-dark">
+                <h1>Hey, soy Ramiro.</h1>	
+            </div>									
+        </header>
+        <section id="slider">
+        <div id="owl-demo" class="owl-carousel">
+            <div>
+                <div class="container">
+                    <h3>Actualmente, leveleando como Web Developer en <a href="http://www.etermax.com">Etermax</a>.</h3>
+                </div>
+            </div>
+            <div>
+                <div class="container">
+                    <a href="mailto:hola@ramirocroce.com.ar?subject=Hey" class="btn">¡Mandame saludos!</a>
+                </div>
+            </div>
+            <div class="container">
+                <ul id="social">
+                    <li id="icon-in"><a href="http://ar.linkedin.com/in/ramirocroce/" title="Linkedin">Linkedin</a></li>
+                    <li id="icon-dr"><a href="http://www.dribbble.com/ramirocroce/" title="Dribbble">Dribbble</a></li>
+                    <li id="icon-tw"><a href="http://www.twitter.com/ramirocroce/" title="Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </div>    
+        </section>
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-31713917-1']);
+            _gaq.push(['_setDomainName', 'ramirocroce.com.ar']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <script>
+            $(document).ready(function() {
+                $("#owl-demo").owlCarousel({
+                    autoPlay: true,
+                    slideSpeed : 400,
+                    paginationSpeed : 400,
+                    singleItem: true,
+                    pagination: false
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+/* Basics ------------------------------------------------------------------------ */
+body {
+    background-color: #181D20;
+    color: #FFF;
+    text-align: center;
+    font: 400 100% 'Rambla', sans-serif;
+
+    a:link, a:visited {
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    a:hover, a:active {
+        text-decoration: none;
+        border: none;
+        color: #95A5A6;
+        transition: all 0.5s ease;
+    }
+}    
+
+/* Commons ------------------------------------------------------------------------ */
+header, section, footer, .container, #social { overflow: hidden; }
+section, footer {padding: 90px 0;}
+#logo i { background: url('img/sprite.png') no-repeat; border: none; }
+p {
+    font-size: 1.115em;
+    line-height: 140%;
+}
+h1, h2, h3 { font-weight: 400; }
+
+/* Container ------------------------------------------------------------------------ */
+.container{
+    margin: 0 auto;
+    width: 1000px;
+}
+
+/* Header ------------------------------------------------------------------------ */
+header {
+    .orange-light {
+        height: 130px;
+        background: #f44839;
+
+        #logo {
+            position: absolute;
+            left: 25%;
+            z-index: 2;
+            display: block;
+            top: 65px;
+
+            margin-right: -25%;
+            width: 50%;
+
+            > i {
+                display: block;
+                margin: 1em auto;
+                width: 82px;
+                height: 97px;
+                background-position: 0 -64px;
+            }
+        }
+    }
+
+    .orange-dark {
+        padding-top: 90px;
+        height: 130px;
+        background: #ED4335;
+
+        h1 {
+            margin: 0;
+            font-size: 2.125em;
+        }
+    }
+}
+
+/* Intro Section ------------------------------------------------------------------------ */
+.slider { 
+    text-align: center;
+    color: #95A5A6;
+    
+    h3 { 
+        font-size: .95em;
+        display: block;
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .btn:link, .btn:active {
+        text-transform: uppercase;
+        display: block;
+        margin-top: 1em;
+        padding: 1em 1.250em;
+        width: 300px;
+        color: #95A5A6;
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid #95A5A6;
+        transition: all 0.5s ease;
+    }
+    .btn:hover{
+        background-color: #FFF;
+        border: 1px solid #FFF;
+        color: #181D20;
+    }
+}    
+
+/* Social ------------------------------------------------------------------------ */
+
+.social {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    
+    li {
+        display: inline-block;
+        margin: 0 5px;
+
+        .icon {
+            display: block;
+            width: 64px;
+            height: 64px;
+            text-indent: -9999em;
+            background: url('img/sprite.png') no-repeat;
+            opacity: .4;
+            transition: all 0.5s ease;
+
+            &:hover {
+                opacity: 1; 
+            }
+
+            &.icon-dr { 
+                background-position: -64px 0;
+            }
+
+            &.icon-tw { 
+                background-position: -128px 0;
+            }
+        }
+    }
+}    
+
+
+/* Media Queries ------------------------------------------------------------------------ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    #logo i, #social li a { background: url('img/sprite-retina.png') no-repeat; }
+    #logo i {
+        background-position: 0 -64px;
+        background-size: 192px 192px;
+    }
+    #social li a { background-size: 192px 192px; }
+}
+
+@media screen and (max-width: 999px) { 
+    .container { width: auto; }
+}
+
+@media screen and (max-width: 600px) { 
+
+    body {font-size: 90%;}
+
+    .btn:link, .btn:active {
+        width: 70%;
+    }
+
+    header h1 {
+        margin: 0 auto;
+        width: 95%;
+    }
+    .slider p { width: 90%; }
+}
+

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="stylesheet" href="css/normalize.css"> 
-        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="style.css"> 
         <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
         <link rel="stylesheet" href="owl-carousel/owl.theme.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -28,8 +28,8 @@
                 <h1>Hey, soy Ramiro.</h1>	
             </div>									
         </header>
-        <section id="slider">
-        <div id="owl-demo" class="owl-carousel">
+        <section class="slider">
+        <div class="owl-demo" class="owl-carousel">
             <div>
                 <div class="container">
                     <h3>Actualmente, leveleando como Web Developer en <a href="http://www.etermax.com">Etermax</a>.</h3>
@@ -41,10 +41,10 @@
                 </div>
             </div>
             <div class="container">
-                <ul id="social">
-                    <li id="icon-in"><a href="http://ar.linkedin.com/in/ramirocroce/" title="Linkedin">Linkedin</a></li>
-                    <li id="icon-dr"><a href="http://www.dribbble.com/ramirocroce/" title="Dribbble">Dribbble</a></li>
-                    <li id="icon-tw"><a href="http://www.twitter.com/ramirocroce/" title="Twitter">Twitter</a></li>
+                <ul class="social">
+                    <li><a class="icon icon-in" href="http://ar.linkedin.com/in/ramirocroce/" title="Linkedin">Linkedin</a></li>
+                    <li><a class="icon icon-dr" href="http://www.dribbble.com/ramirocroce/" title="Dribbble">Dribbble</a></li>
+                    <li><a class="icon icon-tw" href="http://www.twitter.com/ramirocroce/" title="Twitter">Twitter</a></li>
                 </ul>
             </div>
         </div>    
@@ -63,7 +63,7 @@
         </script>
         <script>
             $(document).ready(function() {
-                $("#owl-demo").owlCarousel({
+                $(".owl-demo").owlCarousel({
                     autoPlay: true,
                     slideSpeed : 400,
                     paginationSpeed : 400,

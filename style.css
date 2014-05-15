@@ -455,7 +455,7 @@ section,
 footer {
   padding: 90px 0;
 }
-#logo i {
+.logo i {
   background: url('img/sprite.png') no-repeat;
   border: none;
 }
@@ -478,7 +478,7 @@ header .orange-light {
   height: 130px;
   background: #f44839;
 }
-header .orange-light #logo {
+header .orange-light .logo {
   position: absolute;
   left: 25%;
   z-index: 2;
@@ -487,7 +487,7 @@ header .orange-light #logo {
   margin-right: -25%;
   width: 50%;
 }
-header .orange-light #logo > i {
+header .orange-light .logo > i {
   display: block;
   margin: 1em auto;
   width: 82px;
@@ -561,14 +561,13 @@ header .orange-dark h1 {
   background-position: -128px 0;
 }
 /* Media Queries ------------------------------------------------------------------------ */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  #logo i,
-  #social li a {
+@media (min-resolution: 192dpi) {
+  .logo i,
+  .social li a {
     background: url('img/sprite-retina.png') no-repeat;
   }
-  #logo i {
-    background-position: 0 -64px;
-    background-size: 192px 192px;
+  .logo i {
+    background-size: 192px;
   }
   #social li a {
     background-size: 192px 192px;

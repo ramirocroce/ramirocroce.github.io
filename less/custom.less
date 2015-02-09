@@ -1,9 +1,9 @@
 /* Basics ------------------------------------------------------------------------ */
 body {
-    background-color: #181D20;
     color: #FFF;
     text-align: center;
-    font: 400 100% 'Rambla', sans-serif;
+    background: #222;
+    font: 400 100% 'Peddana', serif;
 
     a:link, a:visited {
         color: #FFF;
@@ -18,93 +18,87 @@ body {
     }
 }    
 
+body {
+    overflow: hidden;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
 /* Commons ------------------------------------------------------------------------ */
 
 header, section, footer, .container, #social { overflow: hidden; }
 section, footer {padding: 90px 0;}
 .logo i { background: url('img/sprite.png') no-repeat; border: none; }
 p {
-    font-size: 1.115em;
-    line-height: 140%;
+    font-size: 1.5em;
+    line-height: 90%;
 }
 h1, h2, h3 { font-weight: 400; }
 
 /* Container ------------------------------------------------------------------------ */
+
+.bg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(img/header.jpg) center;
+    background-size: cover;
+    opacity: .6;
+    z-index: 1;
+}
 .container{
-    margin: 0 auto;
-    width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+  min-width: 320px;
+  z-index: 10;
+}
+
+.content {
+  margin-top: 250px;
 }
 
 /* Header ------------------------------------------------------------------------ */
 
-header {
+.logo {
+    position: absolute;
+    left: 25%;
+    z-index: 2;
+    display: block;
+    top: 65px;
+    margin-right: -25%;
+    width: 50%;
 
-    .orange-light {
-        height: 130px;
-        background: #f44839;
-
-        .logo {
-            position: absolute;
-            left: 25%;
-            z-index: 2;
-            display: block;
-            top: 65px;
-            margin-right: -25%;
-            width: 50%;
-
-            > i {
-                display: block;
-                margin: 1em auto;
-                width: 82px;
-                height: 97px;
-                background-position: 0 -64px;
-            }
-        }
-    }
-
-    .orange-dark {
-        padding-top: 90px;
-        height: 130px;
-        background: #ED4335;
-
-        h1 {
-            margin: 0;
-            font-size: 2.125em;
-        }
+    > i {
+        display: block;
+        margin: 1em auto;
+        width: 82px;
+        height: 97px;
+        background-position: 0 -64px;
     }
 }
-
-/* Intro Section ------------------------------------------------------------------------ */
-
-.slider { 
-    text-align: center;
-    color: #95A5A6;
-    
-    h3 { 
-        font-size: .95em;
-        display: block;
-        width: 65%;
-        margin: 0 auto;
-    }
-
-    .btn:link, .btn:active {
-        text-transform: uppercase;
-        display: block;
-        margin-top: 1em;
-        padding: 1em 1.250em;
-        width: 300px;
-        color: #95A5A6;
-        text-align: center;
-        margin: 0 auto;
-        border: 1px solid #95A5A6;
-        transition: all 0.5s ease;
-    }
-    .btn:hover{
-        background-color: #FFF;
-        border: 1px solid #FFF;
-        color: #181D20;
-    }
-}    
 
 /* Social ------------------------------------------------------------------------ */
 
@@ -151,22 +145,8 @@ header {
     #social li a { background-size: 192px 192px; }
 }
 
-@media screen and (max-width: 999px) { 
-    .container { width: auto; }
+@media screen and (max-width: 960px) { 
+    .container { width: 90%; }
 }
 
-@media screen and (max-width: 600px) { 
-
-    body {font-size: 90%;}
-
-    .btn:link, .btn:active {
-        width: 70%;
-    }
-
-    header h1 {
-        margin: 0 auto;
-        width: 95%;
-    }
-    .slider p { width: 90%; }
-}
 

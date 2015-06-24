@@ -532,7 +532,7 @@ p {
   height: auto;
   margin: auto;
   max-width: 670px;
-  max-height: 420px;
+  max-height: 450px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -548,12 +548,11 @@ p {
 .container .content h1 {
   margin-bottom: 0;
   color: #AD9365;
-  font-size: 3.5em;
+  font-size: 4em;
   font-weight: 700;
   letter-spacing: -6px;
 }
 .container .content h2 {
-  margin-top: 0;
   font: italic 400 1em 'Noto Serif', serif;
 }
 .container .content h2 a:link,
@@ -569,17 +568,16 @@ p {
   transition: color 0.5s ease;
 }
 .container .content .contacto {
-  font-size: .9em;
+  display: inline-block;
   margin: 50px auto 20px;
+  font-size: .9em;
 }
 .container .content .contacto:link,
 .container .content .contacto:active {
   text-transform: uppercase;
-  display: block;
   padding: 10px 15px;
   width: 120px;
   color: #fff;
-  text-align: center;
   text-decoration: none;
   border: 1px solid #808080;
   transition: background-color 0.5s ease;

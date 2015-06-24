@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     compress: false
                 }, 
                 files: { 
-                    "style.css": "less/main.less" 
+                    "ramiro.css": "dev/less/main.less" 
                 } 
             } 
         },
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
           },
           dist: {
             src: ['javascripts/custom.js'],
-            dest: 'js/ramirocroce.js',
+            dest: 'js/ramiro.js',
           },
         },
 

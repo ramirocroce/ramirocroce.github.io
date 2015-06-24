@@ -1,0 +1,57 @@
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff; /* change if the mask should have another color then white */
+  z-index: 99; /* makes sure it stays on top */
+}
+
+#status {
+  width:30px;
+  height:30px;
+  position:absolute;
+  left:50%; /* centers the loading animation horizontally one the screen */
+  top:50%; /* centers the loading animation vertically one the screen */
+  //background-image:url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif); /* path to your loading animation */
+  background: #928A8E;
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:-15px 0 0 -15px; /* is width and height divided by two */
+  -moz-animation: spin .5s infinite linear;
+  -webkit-animation: spin .5s infinite linear;
+  -ms-animation: spin .5s infinite linear;
+  animation: spin .5s infinite linear;
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360sdeg);
+    };
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    };
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    };
+}

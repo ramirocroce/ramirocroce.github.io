@@ -1,0 +1,143 @@
+/* Basics ------------------------------------------------------------------------ */
+
+html {
+  background: url(img/scottish-mountains.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  color: #FFF;
+  text-align: center;
+  font: 400 100% 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.6);
+}   
+
+/* Commons ------------------------------------------------------------------------ */
+
+header, section, footer, .container, #social { overflow: hidden; }
+section, footer {padding: 90px 0;}
+.logo i { background: url('img/sprite.png') no-repeat; border: none; }
+p {
+    font-size: 1em;
+    line-height: 90%;
+}
+
+
+/* Container ------------------------------------------------------------------------ */
+
+.container {
+  position: absolute;
+  width: 85%;
+  height: auto;
+  margin: auto;
+  max-width: 670px;
+  max-height: 420px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .logo {
+
+
+    > i {
+        display: block;
+        margin: 1em auto;
+        width: 82px;
+        height: 97px;
+        background-position: 0 -64px;
+    }
+  }
+
+  .content {
+
+    h1 {
+      margin-bottom: 0;
+      color: #AD9365;
+      font-size: 3.5em;
+      font-weight: 700;
+      letter-spacing: -6px;
+    } 
+
+    h2 {
+      margin-top: 0;
+      font: italic 400 1em 'Noto Serif', serif;
+
+      a:link, a:visited {
+        color: #FFF;
+        text-decoration: none;
+      }
+
+      a:hover, a:active {
+          text-decoration: none;
+          border: none;
+          color: #3DAF49;
+          transition: color 0.5s ease;
+      }
+    }
+
+    .contacto {
+      font-size: .9em;
+      margin: 50px auto 20px;
+    }
+
+    .contacto:link,
+    .contacto:active {
+      text-transform: uppercase;
+      display: block;
+      padding: 10px 15px;
+      width: 120px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid #808080;
+      transition: background-color 0.5s ease;
+    }
+    .contacto:hover {
+      background-color: #FFF;
+      border: 1px solid #FFF;
+      color: #292D37;
+    }
+
+    .social {
+      display: block;
+      padding: 0;
+      
+      li {
+        display: inline-block;
+        margin: 0 5px;
+
+        .icon {
+          display: block;
+          width: 40px;
+          height: 40px;
+          opacity: .4;
+          transition: all 0.5s ease;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+
+          &:hover { opacity: 1; }
+        }
+      }
+    }
+  }
+}

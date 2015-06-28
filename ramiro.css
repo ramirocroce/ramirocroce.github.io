@@ -538,7 +538,7 @@ p {
   bottom: 0;
   right: 0;
 }
-.container .logo > i {
+.container .logo i {
   display: block;
   margin: 1em auto;
   width: 82px;
@@ -547,10 +547,28 @@ p {
 }
 .container .content h1 {
   margin-bottom: 0;
-  color: #AD9365;
-  font-size: 3.5em;
+  color: #A89060;
+  font-size: 4em;
   font-weight: 700;
   letter-spacing: -6px;
+}
+@media (max-width: 750px) {
+  .container .content h1 {
+    font-size: 3em;
+    letter-spacing: -5px;
+  }
+}
+@media (max-width: 600px) {
+  .container .content h1 {
+    font-size: 2.5em;
+    letter-spacing: -4px;
+  }
+}
+@media (max-width: 500px) {
+  .container .content h1 {
+    font-size: 2em;
+    letter-spacing: -3px;
+  }
 }
 .container .content h2 {
   margin-top: 0;
@@ -565,15 +583,15 @@ p {
 .container .content h2 a:active {
   text-decoration: none;
   border: none;
-  color: #3DAF49;
+  color: #8FC067;
   transition: color 0.5s ease;
 }
-.container .content .contacto {
+.container .content .contact {
   font-size: .9em;
   margin: 50px auto 20px;
 }
-.container .content .contacto:link,
-.container .content .contacto:active {
+.container .content .contact:link,
+.container .content .contact:active {
   text-transform: uppercase;
   display: block;
   padding: 10px 15px;
@@ -584,7 +602,7 @@ p {
   border: 1px solid #808080;
   transition: background-color 0.5s ease;
 }
-.container .content .contacto:hover {
+.container .content .contact:hover {
   background-color: #FFF;
   border: 1px solid #FFF;
   color: #292D37;

@@ -515,17 +515,12 @@ body {
 header,
 section,
 footer,
-.container,
 #social {
   overflow: hidden;
 }
 section,
 footer {
   padding: 90px 0;
-}
-.logo i {
-  background: url('img/sprite.png') no-repeat;
-  border: none;
 }
 p {
   font-size: 1em;
@@ -537,8 +532,7 @@ p {
   width: 85%;
   height: auto;
   margin: auto;
-  max-width: 670px;
-  max-height: 420px;
+  max-height: 424px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -546,7 +540,7 @@ p {
 }
 .container .logo i {
   display: block;
-  margin: 1em auto;
+  margin: 0 auto;
   width: 82px;
   height: 97px;
   background-position: 0 -64px;
@@ -588,7 +582,7 @@ p {
 }
 .container .content .contact {
   font-size: .9em;
-  margin: 50px auto 20px;
+  margin: 50px auto 30px;
 }
 .container .content .contact:link,
 .container .content .contact:active {

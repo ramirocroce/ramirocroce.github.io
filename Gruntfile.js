@@ -2,25 +2,32 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-        less: { 
-            dev: { 
-                options: { 
+        less: {
+            dev: {
+                options: {
                     compress: false
-                }, 
-                files: { 
-                    "ramiro.css": "dev/less/main.less" 
-                } 
-            } 
+                },
+                files: {
+                    "ramiro.css": "dev/less/main.less"
+                }
+            }
         },
 
-        // copy: {
-        //     images: {
-        //        expand: true,
-        //        cwd: 'dev/assets/img',
-        //        src: ['**/*.{png,jpg,gif,svg}'],
-        //        dest: 'compiled/img'
-        //     },
-        // },
+        copy: {
+             images: {
+                expand: true,
+                cwd: 'dev/assets/img',
+                src: ['**/*.{png,jpg,gif,svg}'],
+                dest: 'img'
+             },
+
+             prod: {
+                expand: true,
+                cwd: 'dev/assets/img',
+                src: ['**/*.{png,gif,svg}'],
+                dest: 'img'
+             },
+         },
 
          concat: {
           options: {
@@ -64,9 +71,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default',['less', 'imagemin','concat']);
- // grunt.registerTask('prod',['less','imagemin']);
-
-
-
+  grunt.registerTask('default',['less','concat','copy']);
+  grunt.registerTask('prod',['less','concat','copy:prod','imagemin']);
 };

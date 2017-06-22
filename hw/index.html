@@ -9,50 +9,33 @@
 
   <body>
     <img class="logo" src="https://dl.getdropbox.com/s/ha1dwo6elmkpef3/Hot_Wheels.svg" alt="HW">
-    <h2>Treasure Hunts / Super T-Hunts</h2>
-    <ul>
-      <li>
-        <img src="http://www.hwtreasure.com/wp-content/uploads/cars/2017-Toyota-Off-Road-Truck.jpg?w=640" alt="Blister">
-        <h4>[TH] Toyota Off Road Truck</h4>
-      </li>
-      <li>
-        <img src="https://s-media-cache-ak0.pinimg.com/originals/0a/c3/47/0ac347ff90aab6e9bdb47e108695e408.jpg" alt="Blister">
-        <h4>[TH] Toyota Off Road Truck</h4>
-      </li>
-      <li>
-        <img src="http://www.hwtreasure.com/wp-content/uploads/cars/2016-Porsche-993-GT2.jpg" alt="Blister">
-        <h4>[TH] Porsche 993 GT2</h4>
-      </li>
-      <li>
-        <img src="https://dl.getdropbox.com/s/blcxdvb326igmso/2015-2008-Lancer-Evolution.jpg" alt="Blister">
-      <h4>[TH] 2008 Lancer Evolution</h4>
-      </li>
-    </ul>
     
     <h2>Regulares</h2>
-    <ul>
-      <li>
-        <img src="https://dl.getdropbox.com/s/qvhhi49g3zqhux8/91TnQFkwFcL._SY450_.jpg" alt="Blister">
-        <h4>Lamborghini Aventador J (Cualquier variante)</h4>
-      </li>
+
+    <ul id="hr2">
+      <script id="hr-template2" type="text/x-handlebars-template">
+        <li>
+          <img src="{{cells.URL}}" alt="Blister">
+          <h4>{{cells.Name}}</h4>
+        </li>
+      </script>
     </ul>
     
-    <h2>Variantes</h2>
-    <ul>
-      <li>
-      <img src="https://dl.getdropbox.com/s/8ec4rg3cwv6yza7/hot-wheels-porsche-356a-outlaw-gris-120250-2016-D_NQ_NP_630621-MLM20816810490016-F.jpg" alt="Blister">
-      <h4>Porsche 356A Outlaw</h4>
-      </li>
-      <li>
-        <img src="https://dl.getdropbox.com/s/2n3safzguzxlhz6/912N6vsXo7L._SY679_.jpg" alt="Blister">
-        <h4>Lamborghini Huracan LP 610-4</h4>
-      </li>
-      
-      <li>
-        <img src="https://dl.getdropbox.com/s/wux5ko2a5b2bp66/49274ff7-d24e-45f9-ad6e-c412f546757a_large.JPG" alt="Blister">
-        <h4>Lamborghini Huracan LP 610-4</h4>
-      </li>
+    <h2>Treasure Hunts / Super T-Hunts</h2>
+
+    <ul id="hr">
+      <script id="hr-template" type="text/x-handlebars-template">
+        <li>
+          <img src="{{cells.URL}}" alt="Blister">
+          <h4>{{cells.Name}}</h4>
+        </li>
+      </script>
     </ul>
+
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.2/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+  <script src="script.js"></script>
 
 </html>

@@ -7,10 +7,12 @@
 // Define spreadsheet URL.
 var hwRegulars = 'https://docs.google.com/spreadsheets/d/1JjJTL_wG4p1YFF6VkRWBQxf3ioFivD5lwZ-kbMtvFSI/edit#gid=0';
 var hwTreasures = 'https://docs.google.com/spreadsheets/d/1JjJTL_wG4p1YFF6VkRWBQxf3ioFivD5lwZ-kbMtvFSI/edit#gid=2105842102';
+var mjtRegulars = 'https://docs.google.com/spreadsheets/d/1JjJTL_wG4p1YFF6VkRWBQxf3ioFivD5lwZ-kbMtvFSI/edit#gid=268157385';
 
 // Compile the Handlebars template for HR leaders.
 var hwrTemplate = Handlebars.compile($('#hr-template').html());
 var hwtTemplate = Handlebars.compile($('#hr-template2').html());
+var mjtTemplate = Handlebars.compile($('#hr-template3').html());
 
 // Load top five HR leaders.
 $('#hr2').sheetrock({
@@ -22,4 +24,9 @@ $('#hr2').sheetrock({
 $('#hr').sheetrock({
   url: hwTreasures,
   rowTemplate: hwtTemplate
+});
+
+$('#hr3').sheetrock({
+    url: mjtRegulars,
+    rowTemplate: mjtTemplate
 });
